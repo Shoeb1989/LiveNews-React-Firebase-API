@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const BrakingNews = () => {
     return (
-        <div className='flex' >
+        <div className='flex border border-spacing-2 mt-4 ' >
             <button className='btn btn-secondary' >
                 Braking News
             </button>

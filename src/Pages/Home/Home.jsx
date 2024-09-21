@@ -7,7 +7,7 @@ import LeftSideNav from '../LeftSideNav/LeftSideNav';
 
 const Home = () => {
     return (
-        <div>
+        <div >
             <Header></Header>
 
             <BrakingNews></BrakingNews>
