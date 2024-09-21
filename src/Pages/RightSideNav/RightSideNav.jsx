@@ -33,8 +33,9 @@ const RightSideNav = () => {
                     Instagram
                 </a>
             </div>
-            <div className='p-4 space-y-4 mb-6  ' >
-                <h2 className="text 3xl">Q Zone</h2>
+            
+            <div className='p-4  mb-6 border border-spacing-10 back bg-orange-200 ' >
+                <h2 className="text 3xl mb-4 ">Q Zone</h2>
                 <img src={Qzone1} alt="" />
                 <img src={Qzone2} alt="" />
                 <img src={Qzone3} alt="" />
