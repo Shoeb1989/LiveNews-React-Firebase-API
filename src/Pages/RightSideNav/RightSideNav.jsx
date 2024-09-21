@@ -1,25 +1,44 @@
 import React from 'react';
+import Qzone1 from '../../pictures/qZone1.png'
+import Qzone2 from '../../pictures/qZone2.png'
+import Qzone3 from '../../pictures/qZone3.png'
+import {FaGoogle, FaGithub,FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const RightSideNav = () => {
     return (
         <div>
-            <div>
+            <div className='p-4 space-y-4 mb-6  ' >
                 <h2 className="text 3xl">Login With</h2>
-                <button className="btn">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                    Button
+                <button className="btn btn-outline w-full ">
+                    <FaGoogle></FaGoogle>
+                    Loggin With Google
                 </button>
+                <button className="btn btn-outline w-full ">
+                    <FaGithub></FaGithub>
+                    Loggin With Github
+                </button>
+            </div>
+            <div className='p-4  mb-6 ' >
+                <h2 className="text 3xl mb-4 ">Find Us On</h2>
+                <a className='flex p-4 text-lg items-center border rounded-t-lg ' href="">
+                    <FaFacebook className='mr-3' ></FaFacebook>
+                    Facebook
+                </a>
+                <a className='flex p-4 text-lg items-center border-x ' href="">
+                    <FaTwitter className='mr-2' ></FaTwitter>
+                    Twitter
+                </a>
+                <a className='flex p-4 text-lg items-center border rounded-b-lg ' href="">
+                    <FaInstagram className='mr-2' ></FaInstagram>
+                    Instagram
+                </a>
+            </div>
+            <div className='p-4 space-y-4 mb-6  ' >
+                <h2 className="text 3xl">Q Zone</h2>
+                <img src={Qzone1} alt="" />
+                <img src={Qzone2} alt="" />
+                <img src={Qzone3} alt="" />
+                
             </div>
         </div>
     );
