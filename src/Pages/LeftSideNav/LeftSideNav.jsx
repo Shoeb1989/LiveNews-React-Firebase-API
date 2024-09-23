@@ -11,7 +11,7 @@ const LeftSideNav = () => {
     useEffect(() => {
       fetch('categories.json')
       .then(res => res.json())   // convert data json
-      .then(data => setcatagories(data))  // converting data in the setcatagory item
+      .then(data => setcatagories(data))  // converting data in the setcatagory item each
     } , [])
 
 
