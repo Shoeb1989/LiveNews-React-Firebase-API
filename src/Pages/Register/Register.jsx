@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 
-const Login = () => {
+const Register = () => {
 
-    const handleLogin = e => {
+    const handleRegister = e => {
 
         e.preventDefault();
 
@@ -13,10 +13,11 @@ const Login = () => {
         const form = new FormData(e.currentTarget);
 
         console.log(form.get('email'));
-     
+
 
 
     }
+
 
 
 
@@ -27,9 +28,21 @@ const Login = () => {
 
             <div className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                
+
                     <div className="">
-                        <form onSubmit={handleLogin} className="card-body">
+                        <form onSubmit={handleRegister} className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input name='name' type="text" placeholder="Name" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo Url</span>
+                                </label>
+                                <input name='photo' type="text" placeholder="Photo Url" className="input input-bordered" required />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -51,7 +64,7 @@ const Login = () => {
                         </form>
 
                         <p className='flext center' >
-                            Don't have account ? Please <Link className='text-blue-600' to='/register' >Register</Link>
+                            Already have an account? <Link className='text-blue-600' to='/login' >Login</Link>
                         </p>
                     </div>
                 </div>
@@ -61,4 +74,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
