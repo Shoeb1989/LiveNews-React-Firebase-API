@@ -29,7 +29,11 @@ const Home = () => {
                 </div>
                 <div className='lg:col-span-2' >
                     {
-                        news.map(anews => <Newscard></Newscard> )
+                        news.map(anews => < Newscard 
+                          key={anews._id}
+                          news = {anews}
+
+                            ></Newscard> )
                     }
                 </div>
                 <div>
