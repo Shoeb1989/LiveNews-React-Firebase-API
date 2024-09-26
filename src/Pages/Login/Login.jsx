@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../assets/COMPO/AuthProvider/AuthProvider';
 
 const Login = () => {
+
+    const {SignIn} = useContext(AuthContext);
 
     const handleLogin = e => {
 
@@ -11,8 +14,17 @@ const Login = () => {
         console.log(e.currentTarget)
 
         const form = new FormData(e.currentTarget);
+        const email = form.get('email');
+        const password = form.get('password');
+        console.log(email,password);
 
-        console.log(form.get('email'));
+        SignIn(email, password)
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error => {
+            console.error(error);
+        })
      
 
 
@@ -31,7 +43,7 @@ const Login = () => {
                     
                 
                     <div className="">
-                    <p className='text-4xl mr-4' >Please Login</p>
+                    <p className='text-4xl' >Please Login</p>
                         <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
