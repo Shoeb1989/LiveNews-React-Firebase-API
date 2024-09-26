@@ -12,7 +12,12 @@ const Register = () => {
 
         const form = new FormData(e.currentTarget);
 
-        console.log(form.get('email'));
+        const name = form.get('name')
+        const email = form.get('email')
+        const photo = form.get('photo')
+        const password = form.get('password')
+
+        console.log(email, password, name, photo);
 
 
 
@@ -26,10 +31,11 @@ const Register = () => {
         <div>
             <Navbar></Navbar>
 
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero bg-base-400 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
 
                     <div className="">
+                    <p className='text-4xl' >Please Register</p>
                         <form onSubmit={handleRegister} className="card-body">
                             <div className="form-control">
                                 <label className="label">

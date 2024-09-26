@@ -26,9 +26,12 @@ const Login = () => {
             <Navbar></Navbar>
 
             <div className="hero bg-base-200 min-h-screen">
+
                 <div className="hero-content flex-col lg:flex-row-reverse">
+                    
                 
                     <div className="">
+                    <p className='text-4xl mr-4' >Please Login</p>
                         <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
