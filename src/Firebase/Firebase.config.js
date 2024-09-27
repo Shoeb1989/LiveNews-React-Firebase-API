@@ -4,16 +4,20 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDQICaPkHB-PCr2w9mPUwBKXVUxDXObgq0",
-  authDomain: "livenews-c09cc.firebaseapp.com",
-  projectId: "livenews-c09cc",
-  storageBucket: "livenews-c09cc.appspot.com",
-  messagingSenderId: "793187678549",
-  appId: "1:793187678549:web:321e10ed892658feeb97dc"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId:import.meta.env.VITE_projectId ,
+  storageBucket:import.meta.env.VITE_storageBucket ,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId:import.meta.env.VITE_appId, 
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 export default app;
+

@@ -8,7 +8,7 @@ const BrakingNews = () => {
                 Braking News
             </button>
             <Marquee pauseOnHover={true} speed={80} >
-               Braking News Comming Soon, Stay Alart...
+               Braking News Comming Soon.... <span className='text-blue-950 font-bold' >Login to Read Full news</span>
             </Marquee>
         </div>
     );
