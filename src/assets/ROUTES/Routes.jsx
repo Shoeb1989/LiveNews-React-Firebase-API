@@ -23,7 +23,11 @@ const routers = createBrowserRouter([
 
         {
           path:'/news/:id',
+          
           element: <PrivateRoutes> <News></News> </PrivateRoutes>,
+         
+          
+          
 
         },
        {

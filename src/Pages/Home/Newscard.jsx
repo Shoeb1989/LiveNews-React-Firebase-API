@@ -10,7 +10,7 @@ const Newscard = ({ news }) => {
             <figure>
                 <img
                     src={image_url}
-                    alt="Shoes" />
+                     />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
@@ -20,7 +20,7 @@ const Newscard = ({ news }) => {
                         ? <p>{details.slice(0,200)} <Link 
                         to={`/news/${_id}`}
                         
-                        className='text-blue-600 font-bold' >Read More..</Link> </p>
+                        className='text-blue-600 font-bold' >Read More...</Link> </p>
                         : <p>{details}</p>
                     }  
                
