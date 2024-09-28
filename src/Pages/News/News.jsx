@@ -24,14 +24,8 @@ const News = () => {
         setSingleNewsData(singleNews)
     },[news,id])
  
-    const { thumbnail_url, details, author, rating, title, _id, total_view } =
-      singleNewsData || {};
-    const date = new Date(author?.published_date);
-    const formattedDate = date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "numeric",
-      day: "numeric",
-    });
+    const { thumbnail_url, details, rating, title, _id, total_view , image_url} =
+      singleNewsData 
 
 
 
@@ -64,10 +58,10 @@ const News = () => {
             <div className='grid md:grid-cols-4'>
                 <div className='col-span-3' >
 
-                    <div className="card card-compact bg-base-100 w-96 shadow-xl">
+                    <div className="card bg-base-100  shadow-xl  ">
                         <figure>
                             <img
-                                src={thumbnail_url}
+                                src={image_url}
                                 />
                         </figure>
                         <div className="card-body">
